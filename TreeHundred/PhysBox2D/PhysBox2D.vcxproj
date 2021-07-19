@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1D967EBA-60C1-4053-8B6A-F5A72173703A}</ProjectGuid>
+    <RootNamespace>fluid</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectName>PhysBox2D</ProjectName>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>16.0.30323.82</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.\DEPENDENCIES\GLFW\include;.\SOURCE\DEBUG;.\SOURCE\MATH;.\SOURCE\GRAPHICS;.\SOURCE\FUNDAMENTAL;.\SOURCE\PHYSICS;.\SOURCE\THIRD_PARTY;.\SOURCE\GAME;.\SOURCE\PLATFORM;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>.\DEPENDENCIES\GLFW\lib\x86; .\Dependencies\GxBase\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;glfw3dll.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.\DEPENDENCIES\ThreadPool;.\DEPENDENCIES\GLFW\include;.\SOURCE\DEBUG;.\SOURCE\MATH;.\SOURCE\GRAPHICS;.\SOURCE\FUNDAMENTAL;.\SOURCE\PHYSICS;.\SOURCE\THIRD_PARTY;.\SOURCE\GAME;.\SOURCE\PLATFORM;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <OpenMPSupport>true</OpenMPSupport>
+      <CompileAs>CompileAsCpp</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>.\DEPENDENCIES\GLFW\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;glfw3dll.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>.\DEPENDENCIES\GLFW\include;.\SOURCE\DEBUG;.\SOURCE\MATH;.\SOURCE\GRAPHICS;.\SOURCE\FUNDAMENTAL;.\SOURCE\PHYSICS;.\SOURCE\THIRD_PARTY;.\SOURCE\GAME;.\SOURCE\PLATFORM;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>.\DEPENDENCIES\GLFW\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;glfw3dll.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>.\DEPENDENCIES\ThreadPool;.\DEPENDENCIES\GLFW\include;.\SOURCE\DEBUG;.\SOURCE\MATH;.\SOURCE\GRAPHICS;.\SOURCE\FUNDAMENTAL;.\SOURCE\PHYSICS;.\SOURCE\THIRD_PARTY;.\SOURCE\GAME;.\SOURCE\PLATFORM;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>.\DEPENDENCIES\GLFW\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;glfw3dll.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="SOURCE\GRAPHICS\graphics_image_pixel_loader.cpp" />
+    <ClCompile Include="SOURCE\PHYSICS\physics_collision_2d.cpp" />
+    <ClCompile Include="SOURCE\PHYSICS\physics_integration_euler.cpp" />
+    <ClCompile Include="SOURCE\PHYSICS\physics_integration_verlet.cpp" />
+    <ClCompile Include="SOURCE\PHYSICS\physics_spring.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SOURCE\FUNDAMENTAL\fundamental_delta_time.h" />
+    <ClInclude Include="SOURCE\FUNDAMENTAL\fundamental_singleton.h" />
+    <ClInclude Include="SOURCE\CORE\core_thread_manager.h" />
+    <ClInclude Include="SOURCE\CORE\core_thread_pool.h" />
+    <ClInclude Include="SOURCE\GAME\game_ball.h" />
+    <ClInclude Include="SOURCE\GAME\game_platform.h" />
+    <ClInclude Include="SOURCE\GRAPHICS\graphics_color.h" />
+    <ClInclude Include="SOURCE\GRAPHICS\graphics_helper.h" />
+    <ClInclude Include="SOURCE\GRAPHICS\graphics_image_pixel_loader.h" />
+    <ClInclude Include="SOURCE\GRAPHICS\graphics_entity.h" />
+    <ClInclude Include="SOURCE\GRAPHICS\graphics_utility.h" />
+    <ClInclude Include="SOURCE\MATH\math_point_2d.h" />
+    <ClInclude Include="SOURCE\MATH\math_square_root.h" />
+    <ClInclude Include="SOURCE\MATH\math_vector_2d.h" />
+    <ClInclude Include="SOURCE\PHYSICS\physics_collision_2d.h" />
+    <ClInclude Include="SOURCE\PHYSICS\physics_entity.h" />
+    <ClInclude Include="SOURCE\PHYSICS\physics_integration.h" />
+    <ClInclude Include="SOURCE\PHYSICS\physics_integration_euler.h" />
+    <ClInclude Include="SOURCE\PHYSICS\physics_integration_verlet.h" />
+    <ClInclude Include="SOURCE\PHYSICS\physics_spring.h" />
+    <ClInclude Include="SOURCE\PHYSICS\physics_spring_array.h" />
+    <ClInclude Include="SOURCE\PLATFORM\platform_file_reader.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

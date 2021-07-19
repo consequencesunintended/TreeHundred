@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="SOURCE\GRAPHICS\graphics_image_pixel_loader.cpp">
+      <Filter>GRAPHICS</Filter>
+    </ClCompile>
+    <ClCompile Include="SOURCE\PHYSICS\physics_collision_2d.cpp">
+      <Filter>PHYSICS</Filter>
+    </ClCompile>
+    <ClCompile Include="SOURCE\PHYSICS\physics_spring.cpp">
+      <Filter>PHYSICS</Filter>
+    </ClCompile>
+    <ClCompile Include="SOURCE\PHYSICS\physics_integration_euler.cpp">
+      <Filter>PHYSICS</Filter>
+    </ClCompile>
+    <ClCompile Include="SOURCE\PHYSICS\physics_integration_verlet.cpp">
+      <Filter>PHYSICS</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SOURCE\FUNDAMENTAL\fundamental_delta_time.h">
+      <Filter>FUNDAMENTAL</Filter>
+    </ClInclude>
+    <ClInclude Include="SOURCE\FUNDAMENTAL\fundamental_singleton.h">
+      <Filter>FUNDAMENTAL</Filter>
+    </ClInclude>
+    <ClInclude Include="SOURCE\GRAPHICS\graphics_color.h">
+      <Filter>GRAPHICS</Filter>
+    </ClInclude>
+    <ClInclude Include="SOURCE\GRAPHICS\graphics_image_pixel_loader.h">
+      <Filter>GRAPHICS</Filter>
+    </ClInclude>
+    <ClInclude Include="SOURCE\MATH\math_point_2d.h">
+      <Filter>MATH</Filter>
+    </ClInclude>
+    <ClInclude Include="SOURCE\MATH\math_square_root.h">
+      <Filter>MATH</Filter>
+    </ClInclude>
+    <ClInclude Include="SOURCE\MATH\math_vector_2d.h">
+      <Filter>MATH</Filter>
+    </ClInclude>
+    <ClInclude Include="SOURCE\PHYSICS\physics_collision_2d.h">
+      <Filter>PHYSICS</Filter>
+    </ClInclude>
+    <ClInclude Include="SOURCE\PHYSICS\physics_entity.h">
+      <Filter>PHYSICS</Filter>
+    </ClInclude>
+    <ClInclude Include="SOURCE\PHYSICS\physics_integration.h">
+      <Filter>PHYSICS</Filter>
+    </ClInclude>
+    <ClInclude Include="SOURCE\PHYSICS\physics_spring.h">
+      <Filter>PHYSICS</Filter>
+    </ClInclude>
+    <ClInclude Include="SOURCE\PHYSICS\physics_spring_array.h">
+      <Filter>PHYSICS</Filter>
+    </ClInclude>
+    <ClInclude Include="SOURCE\PLATFORM\platform_file_reader.h">
+      <Filter>PLATFORM</Filter>
+    </ClInclude>
+    <ClInclude Include="SOURCE\GRAPHICS\graphics_helper.h">
+      <Filter>GRAPHICS</Filter>
+    </ClInclude>
+    <ClInclude Include="SOURCE\PHYSICS\physics_integration_euler.h">
+      <Filter>PHYSICS</Filter>
+    </ClInclude>
+    <ClInclude Include="SOURCE\CORE\core_thread_manager.h">
+      <Filter>CORE</Filter>
+    </ClInclude>
+    <ClInclude Include="SOURCE\CORE\core_thread_pool.h">
+      <Filter>CORE</Filter>
+    </ClInclude>
+    <ClInclude Include="SOURCE\PHYSICS\physics_integration_verlet.h">
+      <Filter>PHYSICS</Filter>
+    </ClInclude>
+    <ClInclude Include="SOURCE\GAME\game_ball.h">
+      <Filter>GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="SOURCE\GAME\game_platform.h">
+      <Filter>GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="SOURCE\GRAPHICS\graphics_entity.h">
+      <Filter>GRAPHICS</Filter>
+    </ClInclude>
+    <ClInclude Include="SOURCE\GRAPHICS\graphics_utility.h">
+      <Filter>GRAPHICS</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="FUNDAMENTAL">
+      <UniqueIdentifier>{cdb55cfc-56c4-420f-92ae-fe2b5f1d30c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GRAPHICS">
+      <UniqueIdentifier>{b101858f-125b-4b5f-9b56-2141746568f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MATH">
+      <UniqueIdentifier>{77750681-7c9f-44b4-aa3a-62b43ac04f18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CORE">
+      <UniqueIdentifier>{aacb7eb6-4962-4ce6-9c4f-237459714902}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PHYSICS">
+      <UniqueIdentifier>{d2a739ea-9ea7-4281-950d-3d335d4ebae7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PLATFORM">
+      <UniqueIdentifier>{1e182a56-349a-4736-89b6-cc413e4af5f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GAME">
+      <UniqueIdentifier>{97d84769-d0fb-4acc-81b8-b26505f51e2f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
