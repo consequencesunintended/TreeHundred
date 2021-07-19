@@ -2,12 +2,16 @@
 
 #include "glfw3.h"
 #include "graphics_color.h"
+#include "graphics_utility.h"
 #include "math_vector_2d.h"
 #include "physics_entity.h"
 #include <vector>
+#include <memory>
 
 namespace GRAPHICS
 {
+	std::shared_ptr< PANEL_INTERFACE > main_panel;
+
 	void clear()
 	{
 		glClearColor( 114.0f / 255.0f, 0, 138.0f / 255.0f, 1.00 );
@@ -39,7 +43,15 @@ namespace GRAPHICS
 		glTranslatef( 0, 0, -5 );
 	}
 
-	GLFWwindow* create_window( const int& resX, const int& resY, void (*controls) (GLFWwindow*, int, int, int, int) )
+	void controls( GLFWwindow* window, int key, int scancode, int action, int mods )
+	{
+		if ( action == GLFW_PRESS && key == GLFW_KEY_ESCAPE )
+		{
+			glfwSetWindowShouldClose( window, GL_TRUE );
+		}
+	}
+
+	GLFWwindow* create_window( const int& resX, const int& resY )
 	{
 		if ( !glfwInit() )
 		{
@@ -57,16 +69,64 @@ namespace GRAPHICS
 			return NULL;
 		}
 
-		glfwMakeContextCurrent( window );
-		glfwSetKeyCallback( window, controls );
+		glfwMakeContextCurrent( window );		
 
 		printf( "Renderer: %s\n", glGetString( GL_RENDERER ) );
 		printf( "OpenGL version supported %s\n", glGetString( GL_VERSION ) );
 
+		glfwSetKeyCallback( window, controls );
 		glEnable( GL_DEPTH_TEST );
 		glDepthFunc( GL_LEQUAL );
 		glDisable( GL_CULL_FACE );
 		glCullFace( GL_BACK );
 		return window;
+	}
+
+
+	GLFWwindow* initWindow( const int resX, const int resY )
+	{
+		return GRAPHICS::create_window( resX, resY );
+	}
+
+
+	template< class T>
+	int main_graphics( const int width, const int height)
+	{
+		GLint  windowWidth, windowHeight;
+
+		GLFWwindow* window;
+
+		main_panel = std::make_shared<T>();
+
+		main_panel->init();
+
+		window = initWindow( width, height );
+
+		if ( !window )
+		{
+			glfwTerminate();
+			return -1;
+		}
+
+		glfwMakeContextCurrent( window );
+
+
+		while ( !glfwWindowShouldClose( window ) )
+		{
+			main_panel->update();
+
+			glfwGetWindowSize( window, &windowWidth, &windowHeight );
+
+			GRAPHICS::setup3DView( windowWidth, windowHeight );
+
+			main_panel->draw();
+
+			glfwSwapBuffers( window );
+
+			glfwPollEvents();
+		}
+
+		glfwTerminate();
+		return 0;
 	}
 };
