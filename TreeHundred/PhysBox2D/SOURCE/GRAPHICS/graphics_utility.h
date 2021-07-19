@@ -1,12 +1,23 @@
-#pragma
+#ifndef TEST
+#define TEST
 
 #include "glfw3.h"
 #include "graphics_color.h"
 #include "math_vector_2d.h"
 
-namespace GRAPHICS
+class PANEL_INTERFACE
 {
-	void draw_line( const MATH_VECTOR_2D& start, const MATH_VECTOR_2D& end )
+	public:
+	virtual void init( void ) = 0;
+	virtual void draw( void ) = 0;
+	virtual void update( void ) = 0;
+};
+
+
+class GRAPHICS_UTILITY
+{
+public:
+	static void draw_line( const MATH_VECTOR_2D& start, const MATH_VECTOR_2D& end )
 	{
 		glPushMatrix();
 
@@ -20,4 +31,5 @@ namespace GRAPHICS
 		glEnd();
 		glPopMatrix();
 	}
-}
+};
+#endif
