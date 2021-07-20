@@ -11,20 +11,10 @@ class PANEL_INTERFACE
 	virtual void init( void ) = 0;
 	virtual void draw( void ) = 0;
 	virtual void update( void ) = 0;
-	virtual void update_controls( void )
+	virtual void controls( GLFWwindow* window, int key, int scancode, int action, int mods )
 	{
 
 	}
-
-	void controls( GLFWwindow* window, int key, int scancode, int action, int mods )
-	{
-		if ( action == GLFW_PRESS && key == GLFW_KEY_ESCAPE )
-		{
-			glfwSetWindowShouldClose( window, GL_TRUE );
-		}
-		update_controls();
-	}
-
 };
 
 

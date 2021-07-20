@@ -10,7 +10,7 @@
 
 namespace GRAPHICS
 {
-	std::shared_ptr< PANEL_INTERFACE > main_panel;
+	std::unique_ptr< PANEL_INTERFACE > main_panel;
 
 	void clear()
 	{
@@ -49,6 +49,8 @@ namespace GRAPHICS
 		{
 			glfwSetWindowShouldClose( window, GL_TRUE );
 		}
+
+		main_panel->controls( window, key, scancode, action, mods );
 	}
 
 	GLFWwindow* create_window( const int& resX, const int& resY )
@@ -96,7 +98,7 @@ namespace GRAPHICS
 
 		GLFWwindow* window;
 
-		main_panel = std::make_shared<T>();
+		main_panel = std::make_unique<T>();
 
 		main_panel->init();
 
