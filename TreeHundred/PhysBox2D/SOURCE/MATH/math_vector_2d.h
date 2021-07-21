@@ -199,8 +199,8 @@ class MATH_VECTOR_2D
 
 	void Rotate( float radius )
 	{
-		float new_x = cos( radius ) * X - sin( radius ) * Y;
-		float new_y = sin( radius ) * X + cos( radius ) * Y;
+		float new_x = cosf( radius ) * X - sinf( radius ) * Y;
+		float new_y = sinf( radius ) * X + cosf( radius ) * Y;
 
 		X = new_x;
 		Y = new_y;
