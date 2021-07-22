@@ -92,43 +92,63 @@ namespace GRAPHICS
 
 
 	template< class T>
-	GLFWwindow* main_graphics( const int width, const int height)
+	int main_graphics( const int width, const int height)
 	{
 		GLint  windowWidth, windowHeight;
 
-		GLFWwindow* window;
+		GRAPHICS::main_panel = std::make_unique<T>();
+		GRAPHICS::main_panel->init();
 
-		main_panel = std::make_unique<T>();
-
-		main_panel->init();
-
-		window = initWindow( width, height );
+		GLFWwindow* window = GRAPHICS::initWindow( 1024, 640 );
 
 		if ( !window )
 		{
 			glfwTerminate();
-			return nullptr;
+			return -1;
 		}
 
 		glfwMakeContextCurrent( window );
 
+		IMGUI_CHECKVERSION();
+		ImGui::CreateContext();
+		ImGuiIO& io = ImGui::GetIO(); ( void )io;
+
+		ImGui::StyleColorsDark();
+
+		ImGui_ImplGlfw_InitForOpenGL( window, true );
+		ImGui_ImplOpenGL2_Init();
 
 		while ( !glfwWindowShouldClose( window ) )
 		{
-			main_panel->update();
+			glfwPollEvents();
+
+			ImGui_ImplOpenGL2_NewFrame();
+			ImGui_ImplGlfw_NewFrame();
+			ImGui::NewFrame();
+
+			int display_w, display_h;
+			glfwGetFramebufferSize( window, &display_w, &display_h );
+
+			GRAPHICS::main_panel->update();
 
 			glfwGetWindowSize( window, &windowWidth, &windowHeight );
 
 			GRAPHICS::setup3DView( windowWidth, windowHeight );
 
-			main_panel->draw();
+			GRAPHICS::main_panel->draw();
 
+			ImGui::Render();
+			ImGui_ImplOpenGL2_RenderDrawData( ImGui::GetDrawData() );
+			glfwMakeContextCurrent( window );
 			glfwSwapBuffers( window );
-
-			glfwPollEvents();
 		}
 
+		ImGui_ImplOpenGL2_Shutdown();
+		ImGui_ImplGlfw_Shutdown();
+		ImGui::DestroyContext();
+
+		glfwDestroyWindow( window );
 		glfwTerminate();
-		return window;
+		return 0;
 	}
 };
