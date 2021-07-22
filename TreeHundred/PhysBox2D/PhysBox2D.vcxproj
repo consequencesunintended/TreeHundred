@@ -106,7 +106,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>.\DEPENDENCIES\ThreadPool;.\DEPENDENCIES\GLFW\include;.\SOURCE\DEBUG;.\SOURCE\MATH;.\SOURCE\GRAPHICS;.\SOURCE\FUNDAMENTAL;.\SOURCE\PHYSICS;.\SOURCE\THIRD_PARTY;.\SOURCE\GAME;.\SOURCE\PLATFORM;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\DEPENDENCIES\ThreadPool;.\DEPENDENCIES\GLFW\include;.\SOURCE\DEBUG;.\SOURCE\MATH;.\SOURCE\GRAPHICS;.\SOURCE\FUNDAMENTAL;.\SOURCE\PHYSICS;.\SOURCE\THIRD_PARTY;.\SOURCE\GAME;.\SOURCE\PLATFORM;.\DEPENDENCIES\IMGUI\backends;.\DEPENDENCIES\IMGUI;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -170,6 +170,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DEPENDENCIES\Imgui\backends\imgui_impl_glfw.cpp" />
+    <ClCompile Include="DEPENDENCIES\Imgui\backends\imgui_impl_opengl2.cpp" />
+    <ClCompile Include="DEPENDENCIES\Imgui\imgui.cpp" />
+    <ClCompile Include="DEPENDENCIES\Imgui\imgui_demo.cpp" />
+    <ClCompile Include="DEPENDENCIES\Imgui\imgui_draw.cpp" />
+    <ClCompile Include="DEPENDENCIES\Imgui\imgui_tables.cpp" />
+    <ClCompile Include="DEPENDENCIES\Imgui\imgui_widgets.cpp" />
     <ClCompile Include="SOURCE\GRAPHICS\graphics_image_pixel_loader.cpp" />
     <ClCompile Include="SOURCE\PHYSICS\physics_collision_2d.cpp" />
     <ClCompile Include="SOURCE\PHYSICS\physics_integration_euler.cpp" />
@@ -177,6 +184,14 @@
     <ClCompile Include="SOURCE\PHYSICS\physics_spring.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DEPENDENCIES\Imgui\backends\imgui_impl_glfw.h" />
+    <ClInclude Include="DEPENDENCIES\Imgui\backends\imgui_impl_opengl2.h" />
+    <ClInclude Include="DEPENDENCIES\Imgui\imconfig.h" />
+    <ClInclude Include="DEPENDENCIES\Imgui\imgui.h" />
+    <ClInclude Include="DEPENDENCIES\Imgui\imgui_internal.h" />
+    <ClInclude Include="DEPENDENCIES\Imgui\imstb_rectpack.h" />
+    <ClInclude Include="DEPENDENCIES\Imgui\imstb_textedit.h" />
+    <ClInclude Include="DEPENDENCIES\Imgui\imstb_truetype.h" />
     <ClInclude Include="SOURCE\FUNDAMENTAL\fundamental_delta_time.h" />
     <ClInclude Include="SOURCE\FUNDAMENTAL\fundamental_singleton.h" />
     <ClInclude Include="SOURCE\CORE\core_thread_manager.h" />

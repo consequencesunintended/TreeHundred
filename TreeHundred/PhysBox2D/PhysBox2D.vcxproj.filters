@@ -16,6 +16,27 @@
     <ClCompile Include="SOURCE\PHYSICS\physics_integration_verlet.cpp">
       <Filter>PHYSICS</Filter>
     </ClCompile>
+    <ClCompile Include="DEPENDENCIES\Imgui\imgui.cpp">
+      <Filter>DEPENDENCIES\IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPENDENCIES\Imgui\imgui_demo.cpp">
+      <Filter>DEPENDENCIES\IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPENDENCIES\Imgui\imgui_draw.cpp">
+      <Filter>DEPENDENCIES\IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPENDENCIES\Imgui\backends\imgui_impl_glfw.cpp">
+      <Filter>DEPENDENCIES\IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPENDENCIES\Imgui\backends\imgui_impl_opengl2.cpp">
+      <Filter>DEPENDENCIES\IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPENDENCIES\Imgui\imgui_tables.cpp">
+      <Filter>DEPENDENCIES\IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPENDENCIES\Imgui\imgui_widgets.cpp">
+      <Filter>DEPENDENCIES\IMGUI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SOURCE\FUNDAMENTAL\fundamental_delta_time.h">
@@ -84,6 +105,28 @@
     <ClInclude Include="SOURCE\GRAPHICS\graphics_utility.h">
       <Filter>GRAPHICS</Filter>
     </ClInclude>
+    <ClInclude Include="DEPENDENCIES\Imgui\imconfig.h" />
+    <ClInclude Include="DEPENDENCIES\Imgui\imgui.h">
+      <Filter>DEPENDENCIES\IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="DEPENDENCIES\Imgui\backends\imgui_impl_glfw.h">
+      <Filter>DEPENDENCIES\IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="DEPENDENCIES\Imgui\backends\imgui_impl_opengl2.h">
+      <Filter>DEPENDENCIES\IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="DEPENDENCIES\Imgui\imgui_internal.h">
+      <Filter>DEPENDENCIES\IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="DEPENDENCIES\Imgui\imstb_rectpack.h">
+      <Filter>DEPENDENCIES\IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="DEPENDENCIES\Imgui\imstb_textedit.h">
+      <Filter>DEPENDENCIES\IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="DEPENDENCIES\Imgui\imstb_truetype.h">
+      <Filter>DEPENDENCIES\IMGUI</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="FUNDAMENTAL">
@@ -106,6 +149,12 @@
     </Filter>
     <Filter Include="GAME">
       <UniqueIdentifier>{97d84769-d0fb-4acc-81b8-b26505f51e2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DEPENDENCIES">
+      <UniqueIdentifier>{a3cae56e-645a-4123-9d5d-c174f99ca62a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DEPENDENCIES\IMGUI">
+      <UniqueIdentifier>{d5b3c7d9-f2c2-4c9c-a46c-18ce9b3d3992}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
