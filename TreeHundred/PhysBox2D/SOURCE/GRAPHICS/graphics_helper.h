@@ -7,6 +7,7 @@
 #include "physics_entity.h"
 #include <vector>
 #include <memory>
+#include <string>
 
 namespace GRAPHICS
 {
@@ -53,7 +54,7 @@ namespace GRAPHICS
 		main_panel->controls( window, key, scancode, action, mods );
 	}
 
-	GLFWwindow* create_window( const int& resX, const int& resY )
+	GLFWwindow* create_window( const int resX, const int resY, const std::string& name )
 	{
 		if ( !glfwInit() )
 		{
@@ -62,7 +63,7 @@ namespace GRAPHICS
 		}
 		glfwWindowHint( GLFW_SAMPLES, 4 );
 
-		GLFWwindow* window = glfwCreateWindow( resX, resY, "Circle", NULL, NULL );
+		GLFWwindow* window = glfwCreateWindow( resX, resY, name.c_str(), NULL, NULL );
 
 		if ( window == NULL )
 		{
@@ -71,7 +72,7 @@ namespace GRAPHICS
 			return NULL;
 		}
 
-		glfwMakeContextCurrent( window );		
+		glfwMakeContextCurrent( window );
 
 		printf( "Renderer: %s\n", glGetString( GL_RENDERER ) );
 		printf( "OpenGL version supported %s\n", glGetString( GL_VERSION ) );
@@ -85,21 +86,21 @@ namespace GRAPHICS
 	}
 
 
-	GLFWwindow* initWindow( const int resX, const int resY )
+	GLFWwindow* initWindow( const int resX, const int resY, const std::string& name )
 	{
-		return GRAPHICS::create_window( resX, resY );
+		return GRAPHICS::create_window( resX, resY, name );
 	}
 
 
 	template< class T>
-	int main_graphics( const int width, const int height)
+	int main_graphics( const int width, const int height, const std::string& name )
 	{
 		GLint  windowWidth, windowHeight;
 
 		GRAPHICS::main_panel = std::make_unique<T>();
 		GRAPHICS::main_panel->init();
 
-		GLFWwindow* window = GRAPHICS::initWindow( 1024, 640 );
+		GLFWwindow* window = GRAPHICS::initWindow( 1024, 640, name );
 
 		if ( !window )
 		{

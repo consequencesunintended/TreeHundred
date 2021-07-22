@@ -13,7 +13,7 @@
 
 int main( int argc, char** argv )
 {
-	return GRAPHICS::main_graphics<MAIN_PANEL>( 1024, 620 );
+	return GRAPHICS::main_graphics<MAIN_PANEL>( 1024, 620, "TreeHundred" );
 }
 
 
