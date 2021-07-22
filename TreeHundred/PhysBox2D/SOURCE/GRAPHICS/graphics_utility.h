@@ -1,7 +1,7 @@
 #ifndef TEST
 #define TEST
 
-#include "glfw3.h"
+#include "GLFW/glfw3.h"
 #include "graphics_color.h"
 #include "math_vector_2d.h"
 

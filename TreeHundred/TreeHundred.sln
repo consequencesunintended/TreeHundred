@@ -6,9 +6,12 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TreeHundred", "TreeHundred\TreeHundred.vcxproj", "{319B9D47-E6C5-4242-AC91-8845C8B0E0AC}"
 	ProjectSection(ProjectDependencies) = postProject
 		{1D967EBA-60C1-4053-8B6A-F5A72173703A} = {1D967EBA-60C1-4053-8B6A-F5A72173703A}
+		{F32D49EB-1863-4DE4-922F-0411122D7AA4} = {F32D49EB-1863-4DE4-922F-0411122D7AA4}
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PhysBox2D", "PhysBox2D\PhysBox2D.vcxproj", "{1D967EBA-60C1-4053-8B6A-F5A72173703A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Imgui", "Imgui\Imgui.vcxproj", "{F32D49EB-1863-4DE4-922F-0411122D7AA4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,6 +37,14 @@ Global
 		{1D967EBA-60C1-4053-8B6A-F5A72173703A}.Release|x64.Build.0 = Release|x64
 		{1D967EBA-60C1-4053-8B6A-F5A72173703A}.Release|x86.ActiveCfg = Release|Win32
 		{1D967EBA-60C1-4053-8B6A-F5A72173703A}.Release|x86.Build.0 = Release|Win32
+		{F32D49EB-1863-4DE4-922F-0411122D7AA4}.Debug|x64.ActiveCfg = Debug|x64
+		{F32D49EB-1863-4DE4-922F-0411122D7AA4}.Debug|x64.Build.0 = Debug|x64
+		{F32D49EB-1863-4DE4-922F-0411122D7AA4}.Debug|x86.ActiveCfg = Debug|Win32
+		{F32D49EB-1863-4DE4-922F-0411122D7AA4}.Debug|x86.Build.0 = Debug|Win32
+		{F32D49EB-1863-4DE4-922F-0411122D7AA4}.Release|x64.ActiveCfg = Release|x64
+		{F32D49EB-1863-4DE4-922F-0411122D7AA4}.Release|x64.Build.0 = Release|x64
+		{F32D49EB-1863-4DE4-922F-0411122D7AA4}.Release|x86.ActiveCfg = Release|Win32
+		{F32D49EB-1863-4DE4-922F-0411122D7AA4}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

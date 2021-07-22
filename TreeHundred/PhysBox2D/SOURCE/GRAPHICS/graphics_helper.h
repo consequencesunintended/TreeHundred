@@ -1,6 +1,6 @@
 #pragma once
 
-#include "glfw3.h"
+#include "GLFW/glfw3.h"
 #include "graphics_color.h"
 #include "graphics_utility.h"
 #include "math_vector_2d.h"
@@ -92,7 +92,7 @@ namespace GRAPHICS
 
 
 	template< class T>
-	int main_graphics( const int width, const int height)
+	GLFWwindow* main_graphics( const int width, const int height)
 	{
 		GLint  windowWidth, windowHeight;
 
@@ -107,7 +107,7 @@ namespace GRAPHICS
 		if ( !window )
 		{
 			glfwTerminate();
-			return -1;
+			return nullptr;
 		}
 
 		glfwMakeContextCurrent( window );
@@ -129,6 +129,6 @@ namespace GRAPHICS
 		}
 
 		glfwTerminate();
-		return 0;
+		return window;
 	}
 };
