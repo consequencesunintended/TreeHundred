@@ -16,6 +16,7 @@ class MAIN_PANEL : public PANEL_INTERFACE
 
 	std::string m_output_value;
 	L_SYSTEM	m_plant;
-	int			m_iteration{0};
+	int			m_iteration{4};
+	float		m_growth_rate{ 0.1f };
 
 };

@@ -21,19 +21,27 @@ class PANEL_INTERFACE
 class GRAPHICS_UTILITY
 {
 public:
-	static void draw_line( const MATH_VECTOR_2D& start, const MATH_VECTOR_2D& end, const GRAPHICS_COLOR& colour = GRAPHICS_COLOR::White() )
+	static void push_translation_matrix( const MATH_VECTOR_2D& translation )
 	{
 		glPushMatrix();
+		glTranslatef( translation.X, translation.Y, 0.0f );
+	}
+
+	static void pop__matrix()
+	{
+		glPopMatrix();
+	}
+	static void draw_line( const MATH_VECTOR_2D& start, const MATH_VECTOR_2D& end, const GRAPHICS_COLOR& colour = GRAPHICS_COLOR::White() )
+	{
 
 		glColor4fv( colour.GetRGBA() );
-
 		glBegin( GL_LINES );
-
+		
 		glVertex3f( start.X, start.Y, 0.0f );
 		glVertex3f( end.X, end.Y, 0.0f );
 
 		glEnd();
-		glPopMatrix();
+		
 	}
 };
 #endif

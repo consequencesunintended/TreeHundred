@@ -1,4 +1,5 @@
 #include "l_system.h"
+#include <map>
 
 std::string L_SYSTEM::get_genetic_code( const int iteration )
 {
@@ -30,6 +31,7 @@ std::string L_SYSTEM::get_genetic_code( const int iteration )
 			new_string += c;
 		}
 	}
+
 	return new_string;
 }
 
@@ -40,14 +42,10 @@ void L_SYSTEM::create( const int iteration )
 	const auto& code = get_genetic_code( iteration );
 
 	MATH_VECTOR_2D starting_point{ 0.0f, 0.0f };
-	MATH_VECTOR_2D ending_point{ 0.0f, 0.1f };
-	MATH_VECTOR_2D translation_vector{ 0.0f, -5.0f };
+	MATH_VECTOR_2D ending_point{ 0.0f, m_growth_rate };
 
 	std::vector< MATH_VECTOR_2D > saved_starting_states;
 	std::vector< MATH_VECTOR_2D > saved_ending_states;
-
-	starting_point.Translate( translation_vector );
-	ending_point.Translate( translation_vector );
 
 	for ( auto c : code )
 	{
