@@ -33,7 +33,7 @@ void MAIN_PANEL::create_ui( void )
 		m_plant.reset();
 		m_plant.m_axiom = "F";
 		m_plant.m_rules[ 'F' ] = "F[+F]F[-F]F";
-		m_plant.m_rotation_degree = 25.7;
+		m_plant.m_rotation_degree = 25.7f;
 		m_plant.create( m_iteration );
 	}
 
@@ -71,7 +71,7 @@ void MAIN_PANEL::create_ui( void )
 		m_plant.m_axiom = "X";
 		m_plant.m_rules[ 'X' ] = "F[+X][-X]FX";
 		m_plant.m_rules[ 'F' ] = "FF";
-		m_plant.m_rotation_degree = 25.7;
+		m_plant.m_rotation_degree = 25.7f;
 		m_plant.create( m_iteration );
 	}
 
