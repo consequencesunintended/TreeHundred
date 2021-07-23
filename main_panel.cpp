@@ -10,7 +10,7 @@ void MAIN_PANEL::init( void )
 	m_plant.reset();
 	m_plant.m_axiom = "F";
 	m_plant.m_rules[ 'F' ] = "F[+F]F[-F]F";
-	m_plant.m_rotation_degree = 25.7;
+	m_plant.m_rotation_degree = 25.7f;
 	m_plant.create( m_iteration );
 }
 
