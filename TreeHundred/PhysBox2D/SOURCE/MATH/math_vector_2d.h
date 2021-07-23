@@ -196,14 +196,25 @@ class MATH_VECTOR_2D
 		X = second.X - first.X;
 		Y = second.Y - first.Y;
 	}
+	void RotateD( float degree )
+	{
+		const float radius = 3.14f * degree / 180.0f;
 
-	void Rotate( float radius )
+		RotateR( radius );
+	}
+	void RotateR( float radius )
 	{
 		float new_x = cosf( radius ) * X - sinf( radius ) * Y;
 		float new_y = sinf( radius ) * X + cosf( radius ) * Y;
 
 		X = new_x;
 		Y = new_y;
+	}
+
+	void Translate( const MATH_VECTOR_2D& translation_vector )
+	{
+		X += translation_vector.X;
+		Y += translation_vector.Y;
 	}
 
 

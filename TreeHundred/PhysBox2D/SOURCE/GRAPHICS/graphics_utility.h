@@ -21,11 +21,11 @@ class PANEL_INTERFACE
 class GRAPHICS_UTILITY
 {
 public:
-	static void draw_line( const MATH_VECTOR_2D& start, const MATH_VECTOR_2D& end )
+	static void draw_line( const MATH_VECTOR_2D& start, const MATH_VECTOR_2D& end, GRAPHICS_COLOR& colour )
 	{
 		glPushMatrix();
 
-		glColor4fv( GRAPHICS_COLOR::White().GetRGBA() );
+		glColor4fv( colour.GetRGBA() );
 
 		glBegin( GL_LINES );
 
