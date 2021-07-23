@@ -21,9 +21,15 @@
     <ClCompile Include="main_panel.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="l_system.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main_panel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="l_system.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -21,7 +21,7 @@ class PANEL_INTERFACE
 class GRAPHICS_UTILITY
 {
 public:
-	static void draw_line( const MATH_VECTOR_2D& start, const MATH_VECTOR_2D& end, GRAPHICS_COLOR& colour )
+	static void draw_line( const MATH_VECTOR_2D& start, const MATH_VECTOR_2D& end, const GRAPHICS_COLOR& colour = GRAPHICS_COLOR::White() )
 	{
 		glPushMatrix();
 
