@@ -33,7 +33,7 @@
     <WholeProgramOptimization>true</WholeProgramOptimization>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -150,7 +150,7 @@
     <ClCompile>
       <Optimization>MaxSpeed</Optimization>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>.\DEPENDENCIES\ThreadPool;.\DEPENDENCIES\GLFW\include;.\SOURCE\DEBUG;.\SOURCE\MATH;.\SOURCE\GRAPHICS;.\SOURCE\FUNDAMENTAL;.\SOURCE\PHYSICS;.\SOURCE\THIRD_PARTY;.\SOURCE\GAME;.\SOURCE\PLATFORM;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\DEPENDENCIES\ThreadPool;.\DEPENDENCIES\GLFW\include;.\SOURCE\DEBUG;.\SOURCE\MATH;.\SOURCE\GRAPHICS;.\SOURCE\FUNDAMENTAL;.\SOURCE\PHYSICS;.\SOURCE\THIRD_PARTY;.\SOURCE\GAME;.\SOURCE\PLATFORM;.\DEPENDENCIES\IMGUI\backends;.\DEPENDENCIES\IMGUI;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
